@@ -18,8 +18,28 @@ Just call ``simpleautogrow()`` for some ``<textarea>`` elements::
     $('textarea').simpleautogrow();
   });
 
+License
+=======
+
+The jQuery simple autogrow plugin is currently available for use in
+all personal or commercial projects under both MIT_ and GPL_
+licenses. This means that you can choose the license that best suits
+your project, and use it accordingly.
+
+.. _MIT: MIT-LICENSE.txt
+.. _GPL: GPL-LICENSE.txt
+
 Author
 ======
 
 The plugin was originally created by Antti Kaihola
 <akaihol plus-sign jquery at-sign ambitone dot com>.
+
+More information
+================
+
+* the source code is `hosted in GitHub`_
+* a `change log`_ is included with the source coude
+
+.. _hosted in GitHub: http://github.com/akaihola/jquery-simpleautogrow
+.. _change log: CHANGELOG.rst

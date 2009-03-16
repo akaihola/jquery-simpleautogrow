@@ -1,10 +1,10 @@
 /*
- * Simple Auto Expanding Text Area (0.1)
+ * Simple Auto Expanding Text Area (0.1.1)
  * by Antti Kaihola (antti.kaihola.fi)
  * akaihol+jquery@ambitone.com
  *
  * Copyright (c) 2009 Antti Kaihola (antti.kaihola.fi)
- * Licensed under the BSD license.
+ * Licensed under the MIT and BSD licenses.
  *
  * NOTE: This script requires jQuery to work.  Download jQuery at
  *       www.jquery.com
@@ -23,7 +23,7 @@
 				this.timer = window.setInterval(function() {self.checkExpand(); }, 200); })
 			.bind('blur', function() { clearInterval(this.timer); });
 		this.border = $e.outerHeight() - $e.innerHeight();
-		this.clone = $e.clone().css({position: 'absolute', visibility: 'hidden'})
+		this.clone = $e.clone().css({position: 'absolute', visibility: 'hidden'}).attr('name', '')
 		$e.height(e.scrollHeight + this.border)
 			.after(this.clone);
 		this.checkExpand(); };
