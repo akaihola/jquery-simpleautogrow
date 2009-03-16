@@ -1,5 +1,5 @@
 /*
- * Simple Auto Expanding Text Area (0.1.1)
+ * Simple Auto Expanding Text Area (0.1.2-dev)
  * by Antti Kaihola (antti.kaihola.fi)
  * akaihol+jquery@ambitone.com
  *

@@ -39,7 +39,9 @@ More information
 ================
 
 * the source code is `hosted in GitHub`_
+* bugs and support are managed at plugins.jquery.com_
 * a `change log`_ is included with the source coude
 
 .. _hosted in GitHub: http://github.com/akaihola/jquery-simpleautogrow
+.. _plugins.jquery.com: http://plugins.jquery.com/project/simpleautogrow
 .. _change log: CHANGELOG.rst
