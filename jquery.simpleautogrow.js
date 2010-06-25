@@ -30,8 +30,14 @@
 
 	jQuery.simpleautogrow.prototype.checkExpand = function() {
 		var target_height = this.clone[0].scrollHeight + this.border;
-		if (this.textarea.outerHeight() != target_height)
-			this.textarea.height(target_height + 'px');
+		if (this.textarea.outerHeight() != target_height) {
+		  var maxHeight = parseInt(this.textarea.css('max-height'));
+		  if(maxHeight && (target_height > maxHeight)) {
+		    this.textarea.css('overflow', 'auto');
+		  } else {
+		    this.textarea.height(target_height + 'px');
+		  }
+    }
 		this.clone.attr('value', this.textarea.attr('value')).height(0); };
 
 })(jQuery);
