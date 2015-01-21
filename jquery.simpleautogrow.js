@@ -23,15 +23,21 @@
 				this.timer = window.setInterval(function() {self.checkExpand(); }, 200); })
 			.bind('blur', function() { clearInterval(this.timer); });
 		this.border = $e.outerHeight() - $e.innerHeight();
-		this.clone = $e.clone().css({position: 'absolute', visibility: 'hidden', width: ($e.innerWidth()+'px')}).attr('name', '')
+		this.clone = $e.clone().css({position: 'absolute', visibility: 'hidden', width: ($e.innerWidth()+'px')}).prop('name', '')
 		$e.height(e.scrollHeight + this.border)
 			.after(this.clone);
 		this.checkExpand(); };
 
 	jQuery.simpleautogrow.prototype.checkExpand = function() {
 		var target_height = this.clone[0].scrollHeight + this.border;
-		if (this.textarea.outerHeight() != target_height)
-			this.textarea.height(target_height + 'px');
-		this.clone.attr('value', this.textarea.attr('value')).height(0); };
+		if (this.textarea.outerHeight() != target_height) {
+		  var maxHeight = parseInt(this.textarea.css('max-height'));
+		  if(maxHeight && (target_height > maxHeight)) {
+		    this.textarea.css('overflow', 'auto');
+		  } else {
+		    this.textarea.height(target_height + 'px');
+		  }
+    }
+		this.clone.prop('value', this.textarea.prop('value')).height(0); };
 
 })(jQuery);
